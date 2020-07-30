@@ -1,6 +1,24 @@
-# 예))
-# 목요세미나 영상 주소
-# 목요세미나 계정 알려줘
-# 목요세미나 정보 주세요
-def system_info(user_text, intent):
-    return 'Hello world';
+import csv
+
+def system_info():
+    read_csv('../SystemInfo.csv', True)
+
+    return 'Hello world'
+
+def read_csv(file_path, header=False):
+    with open(file_path, mode='r', encoding='utf-8-sig') as file:
+        reader = csv.reader(file) 
+        rtn_data = ['{}\t{}'.format(r[0], r[1]) for r in reader]
+        
+        if(header):
+            rtn_data.pop(0) 
+            
+    file.close()
+    
+    print(rtn_data)
+    return rtn_data
+
+    
+ 
+if __name__ == '__main__':
+    system_info();
