@@ -10,15 +10,16 @@ def read_csv(file_path, header=False):
         reader = csv.reader(file) 
 
         for r in reader:
-            if (r[0] == '금융SW연구소')
-                rtn_data = '{}\t{}'.format(r[0], r[1])
-                pass
+            print(r)
+            # if (r[0] == '금융SW연구소')
+            #     rtn_data = '{}\t{}'.format(r[0], r[1])
+            #     pass
 
 
         # rtn_data = ['{}\t{}'.format(r[0], r[1]) for r in reader]
         
-        if(header):
-            rtn_data.pop(0) 
+        # if(header):
+        #     rtn_data.pop(0) 
             
     file.close()
     
